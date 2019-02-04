@@ -5,6 +5,10 @@ public class StudentInfo
 		private String courses;
 		private String grade;
 		private double gpa;
+		private String course2;
+		private String course3;
+		private String grade2;
+		private String grade3;
 		
 		public StudentInfo(String n, String c, String gr, double gp)
 		{
