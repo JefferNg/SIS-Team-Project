@@ -218,11 +218,11 @@ public class SISRunner
 						
 					}
 					
-//					Format decimal = new DecimalFormat("0.00");
-//					gpa = temp / 3;
-//					String GPA = decimal.format(gpa);
+					Format decimal = new DecimalFormat("0.00");
+					gpa = temp / 3;
+					String GPA = decimal.format(gpa);
 					
-//					students.add(new StudentInfo(firstName + " " + lastName, course1, grade1, course2, grade2, course3, grade3, GPA));
+					students.add(new StudentInfo(firstName + " " + lastName, course1, grade1, course2, grade2, course3, grade3, GPA));
 					
 				}
 			
@@ -268,7 +268,11 @@ public class SISRunner
 				
 					}
 				while(choosing);
-				System.out.println(students.get(0).getGpa());
+				
+				for(StudentInfo s: students)
+					{
+						System.out.println(s.getGpa());
+					}
 				
 			}
 
