@@ -5,7 +5,7 @@ public class SISRunner
 
 		public static void main(String[] args)
 			{
-				  
+				  Scanner number = new Scanner
 
 			}
 
