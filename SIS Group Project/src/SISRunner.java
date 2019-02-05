@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.text.*;
 
+
 public class SISRunner
 	{
 		static Scanner userInput = new Scanner(System.in);
@@ -230,7 +231,7 @@ public class SISRunner
 		
 		public static void main(String[] args) throws IOException
 			{
-				
+
 				fillList();
 				mainMenu();
 				
@@ -270,6 +271,7 @@ public class SISRunner
 				while(choosing);
 				System.out.println(students.get(0).getGpa());
 				
+
 			}
 
 	}
