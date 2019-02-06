@@ -95,6 +95,47 @@ public class sortStudent
 						}
 					else if(choice == 2)
 						{
+							for(int i = 0; i < students.size(); i++)
+								{
+									for(int j = i + 1; j < students.size(); j++)
+										{
+											String[] names1 = students.get(i).getName().split(" ");
+											String[] names2 = students.get(j).getName().split(" ");
+											char first1 = names1[1].charAt(0);
+											char second1 = names2[1].charAt(0);
+											char first2 = names1[1].charAt(1);
+											char second2 = names2[1].charAt(1);
+//											char first3 = names1[1].charAt(2);
+//											char second3 = names2[1].charAt(2);
+//											char first4 = names1[1].charAt(3);
+//											char second4 = names2[1].charAt(3);
+											int num1 = (int) first1;
+											int num2 = (int) second1;
+											if(num1 > num2)
+												{
+													StudentInfo temp = students.get(i);
+													students.set(i, students.get(j));
+													students.set(j, temp);
+													
+												}
+											else if(num1 == num2)
+												{
+													if(first2 > second2)
+														{
+															StudentInfo temp = students.get(i);
+															students.set(i, students.get(j));
+															students.set(j, temp);
+														}
+													
+												}
+											
+										}
+									
+								}
+							
+							for(StudentInfo i: students)
+								System.out.println(i.getName() + " " + i.getGpa());
+							
 							
 							choosing = false;
 						}
