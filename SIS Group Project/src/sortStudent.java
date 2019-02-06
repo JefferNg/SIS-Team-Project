@@ -28,7 +28,7 @@ public class sortStudent
 							+ "\n[3] By GPA"
 							+ "\n[4] By Courses");
 					int choice = userInput.nextInt();
-					if(choice == 1)
+					if(choice == 1) //sorts first name
 						{
 							for(int i = 0; i < students.size(); i++)
 								{
@@ -93,7 +93,7 @@ public class sortStudent
 							
 							choosing = false;
 						}
-					else if(choice == 2)
+					else if(choice == 2) //sorts last name
 						{
 							for(int i = 0; i < students.size(); i++)
 								{
@@ -134,12 +134,12 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName() + " " + i.getGpa());
+								System.out.println(i.getName());
 							
 							
 							choosing = false;
 						}
-					else if(choice == 3)
+					else if(choice == 3) //sorts GPA
 						{
 							for(int i = 0; i < students.size(); i++)
 								{
@@ -160,12 +160,48 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName() + " " + i.getGpa());
+								System.out.println(i.getName() + ": " + i.getGpa());
 									
 							choosing = false;
 						}
-					else if(choice == 4)
+					else if(choice == 4) //sorts courses
 						{
+							for(int i = 0; i < students.size(); i++)
+								{
+									for(int j = i + 1; j < students.size(); j++)
+										{
+											String course1 = students.get(i).getCourses();
+											String course2 = students.get(j).getCourses();
+											char first1 = course1.charAt(0);
+											char second1 = course2.charAt(0);
+											char first2 = course1.charAt(1);
+											char second2 = course2.charAt(1);
+											int num1 = (int) first1;
+											int num2 = (int) second1;
+											if(num1 > num2)
+												{
+													StudentInfo temp = students.get(i);
+													students.set(i, students.get(j));
+													students.set(j, temp);
+													
+												}
+											else if(num1 == num2)
+												{
+													if(first2 > second2)
+														{
+															StudentInfo temp = students.get(i);
+															students.set(i, students.get(j));
+															students.set(j, temp);
+														}
+													
+												}
+											
+										}
+									
+								}
+							
+							for(StudentInfo i: students)
+								System.out.println(i.getName() + ": " + i.getCourses1() + ", " + i.getCourse2() + ", " + i.getCourse3());
 							choosing = false;
 						}
 					else
@@ -177,6 +213,29 @@ public class sortStudent
 					
 				}
 			while(choosing);
+			
+			boolean answering = true;
+			System.out.println("Would you like to do something else?");
+			do
+				{
+					userInput = new Scanner(System.in);
+					String doMore = userInput.nextLine();
+					if(doMore.toLowerCase().equals("yes"))
+						{
+							SISRunner.mainMenu();
+							answering = false;
+						}
+					else if(doMore.toLowerCase().equals("no"))
+						{
+							System.out.println("Ok, good day");
+							answering = false;
+						}
+					else
+						{
+							System.out.println("I don't understand gibberish, please say again");
+						}
+				}
+			while(answering);
 			
 		}
 		

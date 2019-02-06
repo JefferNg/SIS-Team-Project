@@ -238,7 +238,7 @@ public class SISRunner
 				
 			}
 
-		private static void mainMenu()
+		public static void mainMenu()
 			{
 				boolean choosing = true;
 				System.out.println("Welcome to the Student Information System"
