@@ -257,7 +257,7 @@ public class SISRunner
 						}
 					else if(option == 2)
 						{
-							//changegradeandclass;
+						changegradeandclass.changegradeandclass();
 							choosing = false;
 						}
 					else if(option == 3)
