@@ -8,8 +8,21 @@ public class sortStudent
 		static Scanner userInput = new Scanner(System.in);
 		static ArrayList<StudentInfo> students = new ArrayList<StudentInfo>();
 		
+		public static void timer()
+		{
+			try
+				{
+					Thread.sleep(500);
+				} catch (InterruptedException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		
 		public static void addingStudents()
 		{
+			students.clear();
 			for(StudentInfo s: SISRunner.students)
 				{
 					students.add(s);					
@@ -89,7 +102,11 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName());
+								{
+									System.out.println(i.getName());
+									timer();
+								}
+							
 							
 							choosing = false;
 						}
@@ -134,7 +151,10 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName());
+								{
+									System.out.println(i.getName());
+									timer();
+								}
 							
 							
 							choosing = false;
@@ -160,7 +180,10 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName() + ": " + i.getGpa());
+								{
+									System.out.println(i.getName() + ": " + i.getGpa());
+									timer();
+								}
 									
 							choosing = false;
 						}
@@ -201,7 +224,10 @@ public class sortStudent
 								}
 							
 							for(StudentInfo i: students)
-								System.out.println(i.getName() + ": " + i.getCourses1() + ", " + i.getCourse2() + ", " + i.getCourse3());
+								{
+									System.out.println(i.getName() + ": " + i.getCourses1() + ", " + i.getCourse2() + ", " + i.getCourse3());
+									timer();
+								}
 							choosing = false;
 						}
 					else
@@ -215,7 +241,9 @@ public class sortStudent
 			while(choosing);
 			
 			boolean answering = true;
-			System.out.println("Would you like to do something else?");
+			timer();
+			System.out.println(""
+					+ "\nWould you like to do something else?");
 			do
 				{
 					userInput = new Scanner(System.in);

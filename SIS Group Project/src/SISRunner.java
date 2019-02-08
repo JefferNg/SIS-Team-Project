@@ -274,10 +274,7 @@ public class SISRunner
 					}
 				while(choosing);
 				
-//				for(StudentInfo s: students)
-//					{
-//						System.out.println(s.getGpa());
-//					}
+				
 				
 
 			}
