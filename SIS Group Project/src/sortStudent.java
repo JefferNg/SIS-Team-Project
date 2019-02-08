@@ -122,10 +122,17 @@ public class sortStudent
 											char second1 = names2[1].charAt(0);
 											char first2 = names1[1].charAt(1);
 											char second2 = names2[1].charAt(1);
-//											char first3 = names1[1].charAt(2);
-//											char second3 = names2[1].charAt(2);
-//											char first4 = names1[1].charAt(3);
-//											char second4 = names2[1].charAt(3);
+											char first3 = 0;
+											char second3 = 0;
+//											char first4 = 0;
+//											char second4 = 0;
+											if(names2[1].length() > 2)
+												{
+													first3 = names1[1].charAt(2);
+													second3 = names2[1].charAt(2);
+//													first4 = names1[1].charAt(3);
+//													second4 = names2[1].charAt(3);
+												}
 											int num1 = (int) first1;
 											int num2 = (int) second1;
 											if(num1 > num2)
@@ -142,6 +149,16 @@ public class sortStudent
 															StudentInfo temp = students.get(i);
 															students.set(i, students.get(j));
 															students.set(j, temp);
+														}
+													else if(first2 == second2)
+														{
+															if(first3 > second3)
+																{
+																	StudentInfo temp = students.get(i);
+																	students.set(i, students.get(j));
+																	students.set(j, temp);
+																}
+															
 														}
 													
 												}
