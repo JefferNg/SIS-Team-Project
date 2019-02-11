@@ -1,3 +1,4 @@
+
 import java.util.*;
 import java.io.*;
 import java.text.*;
@@ -238,7 +239,7 @@ public class SISRunner
 				
 			}
 
-		public static void mainMenu()
+		private static void mainMenu()
 			{
 				boolean choosing = true;
 				System.out.println("Welcome to the Student Information System"
@@ -257,7 +258,7 @@ public class SISRunner
 						}
 					else if(option == 2)
 						{
-							//changegradeandclass;
+						changegradeandclass.changegradeandclass();
 							choosing = false;
 						}
 					else if(option == 3)
@@ -274,10 +275,12 @@ public class SISRunner
 					}
 				while(choosing);
 				
-				
+//				for(StudentInfo s: students)
+//					{
+//						System.out.println(s.getGpa());
+//					}
 				
 
 			}
 
 	}
-
