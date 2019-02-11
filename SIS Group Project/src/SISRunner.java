@@ -253,12 +253,11 @@ public class SISRunner
 				
 					if(option == 1)
 						{
-							addstudent.addingstudents();
 							choosing = false;
 						}
 					else if(option == 2)
 						{
-							//changegradeandclass;
+						changegradeandclass.changegradeandclass();
 							choosing = false;
 						}
 					else if(option == 3)
@@ -284,3 +283,4 @@ public class SISRunner
 			}
 
 	}
+
