@@ -138,6 +138,9 @@ public static void changegradeandclass()
 				System.out.print(students.get(i).getCourse3() + " ");
 				System.out.println(students.get(i).getGrade3());
 				
+				
+				
+				
 			}
 			
 			
